@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+ <hibernate-mapping>
+   <class name="com.sapestore.hibernate.entity.BookRatingComments" table="BOOK_RATING_COMMENTS">
+  
+  <id name="commentId" type="int" column="COMMENT_ID">
+         <generator class="increment">
+         	<param name="increment">COMMENT_ID</param>
+      </generator>
+      </id>
+      
+      <property name="isbn" >
+      	<column name="ISBN" ></column>
+      </property>
+      <property name="userId">
+      	<column name="USER_ID"></column>
+      </property>
+      <property name="bookComments">
+      <column name="BOOK_COMMENTS"></column>
+      </property>
+      
+      <property name="bookCommentDate">
+      <column name="BOOK_COMMENT_DATE"></column>
+      </property>
+      
+      <property name="bookRating">
+      <column name="BOOK_RATING"></column>
+      </property>
+      
+   </class>
+</hibernate-mapping>
